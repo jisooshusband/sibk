@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  margin-top: 3rem;
+  padding-right: 7rem;
+  padding-left: 7rem;
+  background-color: #ffffff;
+}
+
+.logo {
+  width: 10rem;  
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.head {
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sponsors {
+  width: 10rem;
+}
+
+.content {
+  padding-bottom: 1rem;
+}

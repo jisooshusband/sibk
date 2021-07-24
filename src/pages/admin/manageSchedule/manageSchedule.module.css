@@ -1,0 +1,88 @@
+.container {
+  padding: 1rem 7rem 1rem 7rem;
+  background-color: #f5f6f8;
+}
+
+.row1 {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 30px;
+}
+
+.imageContainer {
+  text-align: center;
+  border: 1px solid #dedede;
+  border-radius: 30px;
+  padding: 1rem;
+}
+
+.movieCover {
+  width: 13rem;
+  border-radius: 25px;
+}
+
+.navDropdown {
+  background-color: #fcfdfe;
+  border: 1px solid #dedede;
+  border-radius: 15px;
+}
+
+.customInput {
+  padding: 5%;
+  background-color: #fcfdfe;
+  border: 1px solid #dedede;
+  border-radius: 15px;  
+}
+
+.imgDiv {
+  padding: 1rem;
+}
+
+.imgDivSelected {
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px rgba(17, 17, 17, 0.08);  
+}
+
+.imgDiv:hover {
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px rgba(17, 17, 17, 0.08);
+}
+
+.cinemas {
+  text-align:center;
+  width: 5rem;
+}
+
+.formContainer {
+  margin-top: 1rem;
+}
+
+.times {
+  text-align:center;
+  font-size: medium;
+  padding: 1rem;
+}
+
+.times:hover {
+  text-align:center;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px rgba(17, 17, 17, 0.08); 
+}
+
+.resetButton {
+  margin-top: 1rem;
+  width: 100%;
+  color: #5f2eea;
+  border: 1px solid #5f2eea;
+}
+
+.submitButton {
+  margin-top: 1rem;
+  background-color: #5f2eea;
+  color: #ffffff;
+  width: 100%;
+}

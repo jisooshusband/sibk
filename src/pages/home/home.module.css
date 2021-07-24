@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700&display=swap');
+
+* {
+  font-family: 'Mulish', sans-serif;
+}
+
+.container {
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+.row1 {
+  padding-top: 1rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tagline {
+  font-weight: 400;
+}
+
+.taglineLoud {
+  font-size: xx-large;
+  color: #5f2eea;
+}
+
+.nowShowing {
+  font-size: large;
+  font-weight: 500;
+  color: #333333;
+}
+
+.viewAll {
+  text-align: end;
+  color: #5f2eea;
+}
+
+.imgBox {
+  margin-top: 3rem;
+  padding: 1rem;
+  box-shadow: 0px 8px 32px rgba(186, 186, 186, 0.24);
+  border-radius: 25px;
+}
+
+.upcomingMovieBox {
+  margin-top: 3rem;
+  padding: 1rem;
+  box-shadow: 0px 8px 32px rgba(186, 186, 186, 0.24);
+  border-radius: 25px;
+  text-align: center;
+}
+
+.upcomingImg {
+  width: 70%;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-weight: 600;
+}
+
+.row2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.months {
+  margin-top: 1rem;
+  border: 2px solid #5f2eea;
+  color: #5f2eea;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: smaller;
+}
+
+.months:hover {
+  background-color: #5f2eea;
+  border: 2px solid #5f2eea;
+  color: #fff;
+}
+
+.cardButton {
+  border: 1px solid #5f2eea;
+  color: #5f2eea;
+  margin-top: 1rem;
+  width:100%
+}
+
+.newsLetter {
+  background-color: #ffffff;
+  text-align: center;
+  margin-top: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 30%;
+  padding-right:30%;
+  font-size: large;
+  border-radius: 25px;
+  box-shadow: 0px 8px 32px rgba(186, 186, 186, 0.24);
+}
+
+.moviegoers {
+  color: #5f2eea;
+  font-size: larger;
+  padding-bottom: 2rem;
+}
+
+.joinButton {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.info {
+  font-size: small;
+}
+
+.footer {
+  padding-top: 3rem;
+}

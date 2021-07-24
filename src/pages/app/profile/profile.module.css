@@ -1,0 +1,84 @@
+.container {
+  background-color: #f5f6f8;
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+.tab {
+  border-bottom: 2px solid #5f2eea;
+  padding-bottom: 1rem;
+}
+
+.titleTab {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.formRow {
+  /* margin-top: 2rem; */
+}
+
+.customInput {
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #f5f6f8;
+}
+
+.formContainer {
+  background-color: #fff;
+  border-radius: 15px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+
+.cardContainer {
+  background-color: #fff;
+  border-radius: 15px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+
+.button {
+  margin-top: 1rem;
+  width: 100%;
+  background-color: #5f2eea;
+  border: 1px solid #5f2eea;
+}
+
+.more {
+  text-align: end;
+}
+
+.rowCard1 {
+  margin-bottom: 1rem;
+}
+
+.rowCard2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.profilePicture {
+  margin: auto;
+  margin-bottom: 2rem;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.loyaltyCard {
+  background-color: #5f2eea;
+  color: #fff;
+  border-radius: 15px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.progress {
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.alert {
+}

@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Mulish:wght@300&display=swap');
+
+.leftSide {
+  height: 120vh;
+  background: url('../../assets/bg.png');
+  text-align: center;
+  color: #fff;
+  font-family: "inter", sans-serif;
+  font-size: xx-large;
+}
+
+.logoContainer { 
+  width: 100%;
+  text-align: center;
+  margin-top: 20%;
+}
+
+.rightSide {
+  padding: 5%;
+}
+
+.tixscapeLogo {
+  display: none;
+}
+
+.rightSide p {
+  color: #808080;
+}
+
+.customInput {
+  border-radius: 8px;
+  background-color: #fcfdfe;
+  padding: 3%;
+}
+
+.signinButton {
+  margin-top: 1rem;
+  padding: 3%;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #5f2eea;
+}
+
+.forget {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.toReset {
+  color: #5f2eea;
+}
+
+.toReset:hover {
+  border-bottom: 2px solid #5f2eea;
+  cursor: pointer;
+}
+
+.or {
+  margin-top: 1rem;
+  color: #808080;
+  text-align: center;
+}
+
+.socialButton {
+  margin-top: 1rem;
+  background-color: #ffffff;
+  color: #808080;
+  box-shadow: 0px 4px 10px rgba(0,0,0, 0.08);
+  border-radius: 16px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.socialButton:hover {
+  border: 2px solid #5f2eea;
+}
+
+.socialIcon {
+  margin-right: 10%;
+}
+
+@media (max-width: 767px) {
+  .leftSide {
+    display: none;
+  }
+
+  .rightSide {
+    padding: 10%;
+  }
+
+  .tixscapeLogo {
+    display: block;
+    width: 80%;
+    margin: 1rem;
+    padding-bottom: 1rem;
+  }
+}

@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+.category {
+  font-family: "Mulish", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: #a0a3bd;
+}
+
+.title {
+  font-family: "Mulish", sans-serif;
+  font-size: small;
+  line-height: 22px;
+  letter-spacing: 0.15px;
+}
+
+.btUpdate {
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  border: 1px solid #5f2eea;
+  border-radius: 30px;
+  color: #5f2eea;
+  height: 34px;
+  width: 100%;
+}
+
+.btDelete {
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 4px;
+  border: 1px solid red;
+  border-radius: 30px;
+  color: red;
+  height: 34px;
+  width: 100%;
+}
+
+.btUpdate:hover {
+  background-color: #5f2eea;
+  border: solid #5f2eea;
+}
+
+.btDelete:hover {
+  background-color: red;
+  border: solid red;
+}
+
+.imgCard {
+  width: 100%;
+  border-radius: 30px;
+  height: 275px;
+}
+
+.customCard {
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 1px 8px 32px rgba(186, 186, 186, 0.24);
+}
