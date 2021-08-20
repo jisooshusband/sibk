@@ -1,35 +1,48 @@
 .navbarContainer {
-  padding-left: 7rem;
-  padding-right: 7rem;
+  padding-left: 3%;
+  padding-right: 3%;
 }
-
-.logo {
-  width: 10rem;
-}
-
-.profilePicture {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 25px;
-}
-
-.profilePicture:hover {
-  border: 2px solid #5f2eea;
-  box-shadow: 0px 8px 32px rgba(186, 186, 186, 0.24);
-}
-
-.signout {
-  font-weight: 500;
-  font-size: normal;
-  border: 2px solid #5f2eea;
-  border-radius: 10px;
-}
-
 
 .link {
-  color: #333;
+  font-family: 'Inter', sans-serif;
+  color: #5c616e;
+  margin: 1rem;
   text-decoration: none;
-  margin-left: 2rem;
+}
+
+.outButton {
+  background-color: #5c616e;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.outButton:hover {
+  background-color: tomato;
+}
+
+.inButton {
+  background-color: #5c616e;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.inButton:hover {
+  background-color: #5375e2;
+}
+
+.logoutText {
+  display: none;
+  color: #5c616e;
+  font-family: 'Inter', sans-serif;
+  font-size: large;
+  margin: 1rem;
+}
+
+.loginText {
+  color: #5c616e;
+  font-family: 'Inter', sans-serif;
+  font-size: large;
+  margin: 1rem;
 }

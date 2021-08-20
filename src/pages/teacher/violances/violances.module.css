@@ -1,0 +1,72 @@
+.container {
+  padding: 0 7rem 7rem 7rem;
+}
+
+.row1 {
+  margin-top: 2rem;
+}
+
+.contentContainer {
+  height: 100%;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-left: 1rem;
+  box-shadow: 0px 8px 32px rgba(186, 186, 186, 0.24);  box-shadow: 0px 8px 32px rgba(186, 186, 186, 0.24);
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-size: x-large;
+  font-weight: 600;
+  color: #5c616e;
+}
+
+.navigation {
+  text-align: end;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #5c616e;
+}
+
+.button {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  background-color: #5c616e;
+  border: 2px solid #5c5c5c;
+  border-radius: 100px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: #0b5ed7;
+  color: #fff;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-size: x-large;
+  font-weight: 600;
+  color: #5c616e;
+}
+
+.content {
+  border: 1px solid #f5f6f8;
+  border-radius: 16px;
+  box-shadow: 0px 8px 32px rgba(186, 186, 186, 0.24);  box-shadow: 0px 8px 32px rgba(186, 186, 186, 0.24);
+  margin: 1rem 10px 1rem 10px;
+  padding: 1rem;
+}
+
+.deleteButton {
+  margin-left: 10px;
+  background-color: #fff;
+  color: tomato;
+  border: none;
+}
+
+.deleteButton:hover {
+  background-color: #fff;
+  color: #0b5ed7;
+}

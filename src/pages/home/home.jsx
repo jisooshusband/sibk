@@ -1,173 +1,119 @@
 import React, { Component } from 'react'
-import axiosApiIntances from '../../utils/axios'
-// import Footer from '../../components/footer/footer'
-import NavigationBar from '../../components/navbar/navbar'
-import NoLoginNavigationBar from '../../components/navbar/noLoginNavbar'
-import Cards from '../../components/cards/card/card'
-import Footer from '../../components/footer/footer'
-// import ReactPaginate from 'react-paginate'
-import { connect } from 'react-redux'
-import { signout } from '../../redux/action/auth'
 import {
   Button,
+  Carousel,
+  CarouselItem,
   Col,
-  Form,
   Container,
   Row,
 } from 'react-bootstrap'
+import {
+  At,
+  Phone
+} from 'phosphor-react'
+import Footer from '../../components/footer/footer'
 import Styles from './home.module.css'
-import banner from '../../assets/banner.png'
+import NavigationBar from '../../components/navbar/navbar'
 
 class Home extends Component {
-  
-  constructor(props) {
-    super(props)
-    this.state = {
-      months: [
-        'Jan',
-        'Feb',
-        'Mar',
-        'Apr',
-        'May',
-        'Jun',
-        'Jul',
-        'Aug',
-        'Sep',
-        'Oct',
-        'Nov',
-        'Dec'
-      ],
-      isLogin: false,
-      nowPlaying: [],
-      upcoming: [],
-      pagination:  {},
-      page: 1,
-      limit: 5,
-    }
-  }
 
-  componentDidMount() {
-
-    if (this.props.auth.data.token) {
-      this.setState({ isLogin: true })
-    } else {
-      this.setState({ isLogin: false })
-    }
-
-    if (this.state.isLogin) {
-      console.log('y');
-    }
-
-    this.getNowPlaying(this.state.page, this.state.limit, 'movie_release_date DESC')
-  }
-
-  getNowPlaying = (page, limit, sort) => {
-    axiosApiIntances
-      .get(`movie?page=${page}&limit=${limit}&sort=${sort}`)
-      .then((res) => {
-        this.setState(({
-          nowPlaying: res.data.data,
-          pagination: res.data.pagination
-        }))
-      })
-      .catch((err) => {
-        console.log(err.response)
-      })
+  toAuth = (props) => {
+    this.props.history.push('/auth')
   }
 
   render() {
 
-    const { isLogin } = this.state
+    const sources = [
+      'https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      'https://images.pexels.com/photos/5212354/pexels-photo-5212354.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      'https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    ]
 
     return(
       <>
-        { 
-          isLogin
-          ? (<NavigationBar />)
-          : (<NoLoginNavigationBar />)
-        }
+
         <Container fluid className={Styles.container}>
+          <NavigationBar className={Styles.navigationBar} />
           <Row className={Styles.row1}>
-            <Col className={Styles.left}>
-              <div className={Styles.tagline}>Nearest Cinema, Latest Movie</div>
-              <div className={Styles.taglineLoud}>Find out now</div>
+            <Col sm={6}>
+              <Carousel className={Styles.carousel}>
+                {sources.map((el) => (
+                  <CarouselItem>
+                    <img src={el} alt="item" className={Styles.carouselItem} />
+                  </CarouselItem>
+                ))}
+              </Carousel>
             </Col>
-            <Col className={Styles.right}>
-              <img src={banner} alt='banner' className={Styles.banner}/>
+            <Col className={Styles.col2}>
+              <h3>Selamat Datang!</h3>
+              <h4>di Sistem Informasi Bimbingan Konseling</h4>
+              <p>Aplikasi ini membantu guru dan siswa dalam pencatatan dan penerapan
+                nilai-nilai kedisiplinan di sekolah. Aplikasi ini juga menghubungkan
+                siswa dan guru secara dua arah dan memudahkan siswa untuk mendapatkan
+                bantuan psikologis dari para guru konseling di sekolah.
+              </p>
+
+              <Button className={Styles.button}
+                onClick={() => window.location.href='/auth'}
+              >
+                {"Klik disini untuk memulai >"}
+              </Button>
             </Col>
           </Row>
 
           <Row className={Styles.row2}>
-            <Row>
-              <Col>
-                <div className={Styles.nowShowing}>Now Showing</div>
-              </Col>
-              <Col className={Styles.viewAll}>View all</Col>
-            </Row>
+            <h5>Keunggulan aplikasi</h5>
+            <hr />
+            
+            <Col sm={4}>
+              <ul>
+                <li>Data diperbaharui secara real-time</li>
+                <li>Privasi terjamin (bcrypt)</li>
+              </ul>
+            </Col>
 
-            <Row>
-              {this.state.nowPlaying.map((item, index) => {
-                return(
-                  <Col>
-                    <Cards data={item} />
-                  </Col>
-                )
-              })}
-            </Row>
+            <Col sm={4}>
+              <ul>
+                <li>Terintegrasi dengan whatsapp</li>
+                <li>Orangtua akan mendapat laporan secara real-time</li>
+              </ul>
+            </Col>
+
+            <Col sm={4}>
+              <ul>
+                <li>Lacak poin disiplinmu</li>
+                <li>Buat jadwal konsultasi</li>
+              </ul>
+            </Col>
           </Row>
+        </Container>
 
-          <Row className={Styles.row2}>
-            <Row>
-              <Col>
-                <div className={Styles.nowShowing}>Upcoming Movies</div>
-              </Col>
-              <Col className={Styles.viewAll}>View all</Col>
-            </Row>
-
-            <Row>
-              {this.state.months.map((i, idx) => {
-                return (
-                  <Col sm={1}>
-                    <Button variant='outline-primary' className={Styles.months}>
-                      {i}
-                    </Button>
-                  </Col>
-                )
-              })}
-            </Row>
-
-            <Row>
-              {this.state.nowPlaying.map((item, index) => {
-                return(
-                  <Col>
-                    <Cards data={item} />
-                  </Col>
-                )
-              })}
-            </Row>
-          </Row>
-
+        <Container fluid className={Styles.footer}>
+          <p>Dibuat atas kolaborasi dari</p>
           <Row>
-            <div className={Styles.newsLetter}>
-              <div>Be the vanguard of the</div>
-              <div className={Styles.moviegoers}>Movie goers</div>
-              <Form>
-                <Row>
-                  <Col md={9}>
-                    <Form.Control placeholder="Email" />
-                  </Col>
-                  <Col md={3}>
-                    <Button variant='primary' className={Styles.joinButton}>Join</Button>
-                  </Col>
-                </Row>
-              </Form>
-              <div className={Styles.info}>By joining to our newsletter</div>
-              <div className={Styles.info}>You will always be the first to know our special deals and promotions</div>
-            </div>
-          </Row>
+            <Col>
+              <img src="https://i.ibb.co/wY1SWLk/raw-1-removebg-preview.png" className={Styles.schoolImg} alt="x" />
+            </Col>
 
-          <Row className={Styles.footer}>
-            <Footer />
+            <Col>
+              <h6>MTs Al Husna, Depok</h6>
+              <br />
+                <a href="mailto:mtsalhusnadepok1@gmail.com" className={Styles.mailto}>
+                  <At size={20} />
+                  mtsalhusnadepok1@gmail.com
+                </a>
+                <p>
+                  <Phone size={20} />
+                  021-872 4678
+                </p>
+              <p>Unggul dalam IMTAQ, mulia dalam AKHLAQ dan terampil dalam IPTEK</p>
+            </Col>
+
+            <Col>
+              <h6>Ladias Hutagalung</h6>
+              <br />
+              <p>Teknik Informatika, Universitas Indraprasta, 2017</p>
+            </Col>
           </Row>
         </Container>
       </>
@@ -175,10 +121,4 @@ class Home extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  auth: state.auth,
-})
-
-const mapDispatchToProps = { signout }
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default Home

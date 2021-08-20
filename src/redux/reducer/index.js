@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 import auth from './auth'
-import movie from './movie'
-import profile from './profile'
+import penalty from './penalty'
+import student from './student'
 
 export default combineReducers({
   auth,
-  movie,
-  profile
+  penalty,
+  student
 })

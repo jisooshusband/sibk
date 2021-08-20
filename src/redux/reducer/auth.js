@@ -1,20 +1,20 @@
 const initialState = {
   data: {},
   isLoading: false,
-  isError: false,
+  isError: true,
   msg: ''
 }
 
 const auth = (state = initialState, action) => {
   switch (action.type) {
-    case 'SIGNIN_PENDING':
+    case 'TEACHER_LOGIN_PENDING':
       return {
         ...state,
         isLoading: true,
         isError: false,
         msg: ''
       }
-    case 'SIGNIN_REJECTED':
+    case 'TEACHER_LOGIN_REJECTED':
       return {
         ...state,
         isLoading: false,
@@ -22,7 +22,7 @@ const auth = (state = initialState, action) => {
         data: {},
         msg: action.payload.response.data.msg
       }
-    case 'SIGNIN_FULFILLED':
+    case 'TEACHER_LOGIN_FULFILLED':
       return {
         ...state,
         isLoading: false,
@@ -30,21 +30,22 @@ const auth = (state = initialState, action) => {
         data: action.payload.data.data,
         msg: action.payload.data.msg
       }
-    case 'SIGNUP_PENDING':
+    case 'STUDENT_LOGIN_PENDING':
       return {
         ...state,
         isLoading: true,
         isError: false,
         msg: ''
       }
-    case 'SIGNUP_REJECTED':
+    case 'STUDENT_LOGIN_REJECTED':
       return {
         ...state,
         isLoading: false,
         isError: true,
+        data: {},
         msg: action.payload.response.data.msg
       }
-    case 'SIGNUP_FULFILLED':
+    case 'STUDENT_LOGIN_FULFILLED':
       return {
         ...state,
         isLoading: false,
@@ -52,38 +53,99 @@ const auth = (state = initialState, action) => {
         data: action.payload.data.data,
         msg: action.payload.data.msg
       }
-    case 'GET_PROFILE_PENDING':
+    case 'TEACHER_OTP_PENDING':
       return {
         ...state,
-        isLoading: false,
+        isLoading: true,
         isError: false,
         msg: ''
       }
-    case 'GET_PROFILE_REJECTED':
+    case 'TEACHER_OTP_REJECTED':
       return {
         ...state,
         isLoading: false,
         isError: true,
-        msg: action.payload.response.data.msg
+        data: {},
+        msg: action.payload.response.data.msg        
       }
-    case 'GET_PROFILE_FULFILLED':
+    case 'TEACHER_OTP_FULFILLED':
       return {
         ...state,
         isLoading: false,
         isError: false,
-        data: { ...state.data, ...action.payload.data.data },
+        data: action.payload.data.data,
         msg: action.payload.data.msg
       }
-    case 'SIGNOUT':
-      localStorage.clear()
+    case 'STUDENT_OTP_PENDING':
+      return {
+        ...state,
+        isLoading: true,
+        isError: false,
+        msg: ''        
+      }
+    case 'STUDENT_OTP_REJECTED':
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+        data: {},
+        msg: action.payload.response.data.msg        
+      }
+    case 'STUDENT_OTP_FULFILLED':
       return {
         ...state,
         isLoading: false,
         isError: false,
-        data: {},
-        msg: 'Signed out successfully'
+        data: action.payload.data.data,
+        msg: action.payload.data.msg        
       }
-    default:
+    case 'STUDENT_REGISTER_PENDING':
+      return {
+        ...state,
+        isLoading: true,
+        isError: false,
+        msg: ''                
+      }
+    case 'STUDENT_REGISTER_REJECTED':
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+        data: {},
+        msg: action.payload.response.data.msg               
+      }
+    case 'STUDENT_REGISTER_FULFILLED':
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        data: action.payload.data.data,
+        msg: action.payload.data.msg                
+      }
+    case 'TEACHER_REGISTER_PENDING':
+      return {
+        ...state,
+        isLoading: true,
+        isError: false,
+        msg: ''                
+      }
+    case 'TEACHER_REGISTER_FULFILLED':
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        data: action.payload.data.data,
+        msg: action.payload.data.msg                
+      }
+    case 'TEACHER_REGISTER_REJECTED':
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+        data: {},
+        msg: action.payload.response.data.msg               
+      }
+    default: 
       return state
   }
 }

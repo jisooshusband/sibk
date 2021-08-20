@@ -16,49 +16,9 @@ class Footer extends Component {
     return(
       <>
         <Row className={Styles.container}>
-          <Col>
-            <div>
-              <img src={logo}
-              className={Styles.logo}
-              alt='logo'
-              />              
-            </div>
-            <div>Book tickets conveniently, watch movie quitely.</div>
-          </Col>
-          <Col>
-            <div className={Styles.head}>Explore</div>
-            <div className={Styles.content}>Payments</div>
-            <div className={Styles.content}>My Bookings</div>
-            <div className={Styles.content}>Profile</div>
-            <div className={Styles.content}>Contact us</div>
-          </Col>
-          <Col>
-            <div className={Styles.head}>Our Sponsors</div>
-            <div>
-            <img 
-                src={hiflix}
-                className={Styles.sponsors}
-                alt='sponsor'
-              />
-            </div>
-            <div>
-              <img 
-                src={cineone}
-                className={Styles.sponsors}
-                alt='sponsor'
-              />
-            </div>
-            <div>
-              <img 
-                src={ebv}
-                className={Styles.sponsors}
-                alt='sponsor'
-              />
-            </div>
-          </Col>
-          <Col>
-            <div className={Styles.head}>Follow us</div>
-          </Col>
+          <Col style={{ textAlign:"start" }}><p>SIBK 2021</p></Col>
+          <Col><p>{""}</p></Col>
+          <Col style={{ textAlign:"end" }}><p>Ladias Hutagalung</p></Col>
         </Row>
       </>
     )

@@ -1,27 +1,15 @@
 .container {
   width: 100%;
-  margin-top: 3rem;
-  padding-right: 7rem;
-  padding-left: 7rem;
-  background-color: #ffffff;
-}
-
-.logo {
-  width: 10rem;  
-  margin-top: 1rem;
+  border-radius: 20px;
+  background-color: #dedede;
+  box-shadow: 0px 8px 32px rgba(186, 186, 186, 0.24);
+  padding-top: 2%;
+  padding-bottom: 1%;
   margin-bottom: 1rem;
 }
 
-.head {
-  font-weight: 600;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.sponsors {
-  width: 10rem;
-}
-
-.content {
-  padding-bottom: 1rem;
+.container p {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
